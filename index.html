@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b22">
+  <meta name="description" content="Découvrez un rooftop à La Mongie, face aux Pyrénées : terrasses panoramiques, pièces de vie et visite virtuelle 360° immersive.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rooftop à La Mongie | Visite privée 360°">
+  <meta property="og:description" content="Découvrez le rooftop et sa vue panoramique sur le Grand Tourmalet au fil de 15 panoramas immersifs.">
+  <title>Rooftop La Mongie | Visite privée 360°</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/cover/hero-rooftop.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5.15.1/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin@5.15.1/index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+        "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5.15.1/index.module.js",
+        "@photo-sphere-viewer/markers-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin@5.15.1/index.module.js"
+      }
+    }
+  </script>
+  <script defer src="site-config.js"></script>
+  <script defer src="js/scenes.js"></script>
+  <script defer src="js/app.js"></script>
+  <script type="module" src="js/tour.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#visite">Aller à la visite virtuelle</a>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="#accueil" aria-label="Rooftop La Mongie, retour à l'accueil">
+      <span class="wordmark-symbol" aria-hidden="true">R<span>°</span></span>
+      <span class="wordmark-text">ROOFTOP<small>LA MONGIE</small></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="#bien">Le bien</a>
+      <a href="#visite">Visite 360°</a>
+      <a href="#panoramas">Les panoramas</a>
+      <a href="#contact">Informations</a>
+    </nav>
+    <a class="nav-cta" href="#visite"><span class="small-orbit" aria-hidden="true"></span> Explorer le bien <span aria-hidden="true">↗</span></a>
+    <button id="mobile-menu" class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil" aria-labelledby="hero-heading">
+      <div class="hero-photo" role="img" aria-label="Terrasse du rooftop ouverte sur les montagnes enneigées de La Mongie"></div>
+      <div class="hero-scrim"></div>
+      <div class="hero-body container">
+        <span class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> LA MONGIE <span class="eyebrow-dot">✦</span> PYRÉNÉES FRANÇAISES</span>
+        <h1 id="hero-heading">La montagne,<br><em>à perte de vue.</em></h1>
+        <p>Un rooftop singulier face aux sommets du Grand Tourmalet. Découvrez ses espaces, sa lumière et ses terrasses comme si vous y étiez.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#visite"><span class="orbit" aria-hidden="true">◉</span> Commencer la visite 360° <span aria-hidden="true">↗</span></a>
+          <a class="text-action" href="#bien">Découvrir le lieu <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <div class="hero-index"><span class="line"></span><span>01 <span class="muted">/</span> 04</span><span class="tracking">UNE VISITE À PART</span></div>
+        <div class="hero-location"><span class="location-icon" aria-hidden="true">⌖</span> LA MONGIE · GRAND TOURMALET</div>
+        <a class="scroll-cue" href="#bien" aria-label="Défiler vers la présentation"><span>SCROLL</span><span class="circle-arrow">↓</span></a>
+      </div>
+      <div class="hero-side-label" aria-hidden="true">L'EXCEPTION EST DANS LA VUE</div>
+    </section>
+
+    <section class="introduction section-pad" id="bien" aria-labelledby="intro-heading">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <div class="section-heading-top"><span class="chapter">01 / LE LIEU</span><span class="hairline"></span></div>
+          <span class="eyebrow eyebrow-dark">UNE ADRESSE EN ALTITUDE</span>
+          <h2 id="intro-heading">Un horizon<br><em>sans limites.</em></h2>
+          <p class="lead">Ici, le regard se prolonge naturellement jusqu'aux crêtes. Les espaces intérieurs s'ouvrent sur un environnement de montagne spectaculaire.</p>
+          <p>Des pièces de vie baignées de lumière aux chambres, en passant par la cuisine et les espaces extérieurs, parcourez le bien à votre rythme grâce à une visite immersive réalisée à partir des prises de vues sur place.</p>
+          <a class="inline-link" href="#visite">Entrer dans le rooftop <span aria-hidden="true">↗</span></a>
+          <div class="intro-points">
+            <div><span class="point-symbol">↗</span><span>Terrasses avec vues<br>sur les montagnes</span></div>
+            <div><span class="point-symbol">◎</span><span>15 points de vue<br>en immersion 360°</span></div>
+          </div>
+        </div>
+        <div class="intro-art">
+          <figure class="intro-main-photo"><img src="assets/cover/salon-lumiere.webp" width="1300" height="860" loading="lazy" alt="Pièce de vie et ses fenêtres tournées vers les montagnes"><figcaption>ESPACE DE VIE · LUMIÈRE NATURELLE</figcaption></figure>
+          <figure class="intro-small-photo"><img src="assets/cover/rooftop-wide.webp" width="1300" height="860" loading="lazy" alt="Coursive et terrasse sur les paysages du Grand Tourmalet"></figure>
+          <div class="intro-stamp" aria-hidden="true"><span>VUES</span><strong>360°</strong><span>PYRÉNÉES</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature-band" aria-label="Points forts du bien">
+      <div class="container signature-grid">
+        <div class="signature-item"><span class="signature-icon" aria-hidden="true">⌖</span><span><strong>LA MONGIE</strong><small>Grand Tourmalet · Pyrénées</small></span></div>
+        <div class="signature-item"><span class="signature-icon" aria-hidden="true">☀</span><span><strong>VUES OUVERTES</strong><small>Massifs et paysages d'altitude</small></span></div>
+        <div class="signature-item"><span class="signature-icon" aria-hidden="true">↗</span><span><strong>ESPACES EXTÉRIEURS</strong><small>Terrasses et coursives</small></span></div>
+        <div class="signature-item"><span class="signature-icon" aria-hidden="true">◎</span><span><strong>VISITE IMMERSIVE</strong><small>15 panoramas en 360°</small></span></div>
+      </div>
+    </section>
+
+    <section class="tour-section" id="visite" aria-labelledby="tour-heading">
+      <div class="container tour-intro">
+        <div>
+          <div class="section-heading-top"><span class="chapter chapter-light">02 / L'IMMERSION</span><span class="hairline hairline-dark"></span></div>
+          <span class="eyebrow eyebrow-gold">LA VISITE PRIVÉE</span>
+          <h2 id="tour-heading">Chaque espace.<br><em>Chaque perspective.</em></h2>
+        </div>
+        <p>Déplacez la vue à 360° avec la souris ou le doigt, zoomez, puis choisissez les espaces à explorer. Les points interactifs vous guident d'une vue à l'autre.</p>
+      </div>
+      <div class="tour-shell" id="tour-shell">
+        <aside class="tour-sidebar" aria-label="Sélection des espaces">
+          <div class="sidebar-head"><span class="sidebar-eyebrow">EXPLORER LE BIEN</span><strong>Les espaces <sup>15</sup></strong></div>
+          <div class="scene-filters" role="group" aria-label="Filtrer les panoramas">
+            <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Tout</button>
+            <button class="filter-chip" type="button" data-filter="outside" aria-pressed="false">Extérieur</button>
+            <button class="filter-chip" type="button" data-filter="living" aria-pressed="false">Vie</button>
+            <button class="filter-chip" type="button" data-filter="sleeping" aria-pressed="false">Nuit</button>
+            <button class="filter-chip" type="button" data-filter="utility" aria-pressed="false">Autres</button>
+          </div>
+          <div class="scene-list" id="scene-list" aria-label="Liste des panoramas"></div>
+          <div class="sidebar-foot">15 clichés 360° du bien réel <span>◈</span></div>
+        </aside>
+        <div class="tour-stage">
+          <div id="viewer" aria-label="Visite virtuelle panoramique interactive à 360 degrés"></div>
+          <div class="viewer-fallback" id="viewer-fallback" aria-live="polite"><span class="loading-orbit"></span><strong>Préparation de votre visite</strong><span id="viewer-message">Chargement de la vue à 360°…</span></div>
+          <div class="viewer-topbar"><div class="viewer-scene-tag"><span class="live-dot"></span><span id="scene-category">EXTÉRIEUR</span><span class="scene-counter" id="scene-counter">01 / 15</span></div><button class="viewer-iconbtn" type="button" id="share-scene" aria-label="Partager cette vue" title="Partager cette vue">↗</button></div>
+          <div class="viewer-bottom"><div class="viewer-caption"><span class="caption-overline">VOTRE VISITE IMMERSIVE</span><h3 id="scene-title">Terrasse · Panorama</h3><p id="scene-subtitle">Vue à 360° sur les montagnes et la terrasse</p></div><div class="viewer-actions"><button type="button" id="scene-prev" class="stage-btn" title="Vue précédente" aria-label="Vue précédente">←</button><button type="button" id="scene-next" class="stage-btn" title="Vue suivante" aria-label="Vue suivante">→</button><button type="button" id="viewer-fullscreen" class="stage-btn stage-btn-fullscreen" title="Plein écran" aria-label="Afficher la visite en plein écran">⛶</button></div></div>
+          <div class="viewer-hint" id="viewer-hint">↔ Faites glisser pour regarder autour de vous</div>
+        </div>
+      </div>
+      <div class="tour-under container"><span>VISITE RÉALISÉE AVEC PHOTO SPHERE VIEWER</span><span>360° · INTERACTIF · DESKTOP & MOBILE</span></div>
+    </section>
+
+    <section class="gallery-section section-pad" id="panoramas" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="gallery-head"><div><div class="section-heading-top"><span class="chapter">03 / LES PERSPECTIVES</span><span class="hairline"></span></div><span class="eyebrow eyebrow-dark">LE CHARME DU GRAND AIR</span><h2 id="gallery-heading">La montagne<br><em>en grand.</em></h2></div><p>Profitez de plusieurs points de vue depuis les terrasses et les pièces lumineuses, face aux reliefs des Pyrénées.</p></div>
+        <div class="photo-editorial">
+          <a class="editorial-main" href="#visite" data-open-scene="terrasse-panorama"><img src="assets/cover/rooftop-wide.webp" width="1300" height="860" loading="lazy" alt="Longue terrasse avec la montagne en arrière-plan"><span class="editorial-badge">01 / TERRASSE</span><span class="editorial-arrow" aria-hidden="true">↗</span></a>
+          <a class="editorial-secondary" href="#visite" data-open-scene="salon-panoramique"><img src="assets/cover/salon-fenetres.webp" width="1300" height="860" loading="lazy" alt="Depuis le séjour, fenêtres ouvrant sur le paysage enneigé"><span class="editorial-badge">02 / SÉJOUR</span><span class="editorial-arrow" aria-hidden="true">↗</span></a>
+          <a class="editorial-third" href="#visite" data-open-scene="chambre-double"><img src="assets/cover/chambre-vue.webp" width="1300" height="860" loading="lazy" alt="Chambre double aux meubles en bois"><span class="editorial-badge">03 / CHAMBRE</span><span class="editorial-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="information-section" id="contact" aria-labelledby="info-heading">
+      <div class="container info-inner"><div><span class="eyebrow eyebrow-gold">POUR ALLER PLUS LOIN</span><h2 id="info-heading">Un projet vous<br><em>inspire ?</em></h2><p>Cette présentation privée donne un premier aperçu du bien. Pour obtenir les informations détaillées ou organiser une visite, rapprochez-vous de votre interlocuteur.</p><div class="contact-dynamic" id="contact-dynamic"></div></div><div class="info-aside"><div class="info-emblem">R<span>°</span></div><span>ROOFTOP · LA MONGIE</span><div class="info-divider"></div><p>Un horizon unique.<br>Un lieu à découvrir.</p><button class="btn btn-outline" type="button" id="share-site">Partager la présentation <span aria-hidden="true">↗</span></button></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="#accueil" class="footer-brand">R° <span>ROOFTOP · LA MONGIE</span></a><p>Présentation indicative · Caractéristiques et conditions à confirmer auprès du vendeur.</p><a href="#accueil" class="backtop">RETOUR EN HAUT ↑</a></div></footer>
+  <noscript><div class="nojs">Pour profiter de la visite à 360°, activez JavaScript dans votre navigateur.</div></noscript>
+</body>
+</html>
