@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101b22">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="Découvrez en immersion 360° les projections d'aménagement du rooftop de La Mongie : séjour ouvert, chambres, salles de bains et terrasses.">
+  <title>Après rénovation — Projection 360° | Rooftop La Mongie</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preload" href="../assets/apres-renovation/previews/sejour-cuisine-ouverte.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5.15.1/index.css">
+  <link rel="stylesheet" href="renovation.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","@photo-sphere-viewer/core":"https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5.15.1/index.module.js"}}</script>
+  <script type="module" src="tour.js"></script>
+</head>
+<body class="renovation-page">
+  <a class="skip-link" href="#visite">Aller à la visite 360°</a>
+  <header class="site-header renovation-header">
+    <a class="wordmark" href="../#accueil" aria-label="Retour à l'accueil du rooftop">
+      <span class="wordmark-symbol" aria-hidden="true">R<span>°</span></span><span class="wordmark-text">ROOFTOP<small>LA MONGIE</small></span>
+    </a>
+    <nav class="renovation-header-links" aria-label="Navigation">
+      <a href="../#visite">Le bien actuel</a>
+      <a href="#visite" aria-current="page">Après rénovation</a>
+    </nav>
+    <a class="nav-cta" href="../#visite">← Retour à la visite actuelle</a>
+  </header>
+  <main>
+    <section class="reno-hero" aria-labelledby="reno-title">
+      <div class="reno-hero-picture" role="img" aria-label="Projection du séjour après rénovation, esprit chalet contemporain"></div>
+      <div class="reno-hero-scrim"></div>
+      <div class="container reno-hero-content">
+        <span class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> ROOFTOP · LA MONGIE <span class="eyebrow-dot">✦</span> PROJECTION D'AMÉNAGEMENT</span>
+        <h1 id="reno-title">Imaginez<br><em>l'après.</em></h1>
+        <p>Un nouveau regard sur le rooftop : une ambiance chalet contemporaine, une cuisine ouverte, des chambres plus confortables et des terrasses réinventées.</p>
+        <a class="btn btn-light" href="#visite">Explorer le projet en 360° <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="reno-hero-mark">CONCEPT DE RÉNOVATION · NON RÉALISÉ</div>
+    </section>
+    <section class="reno-disclaimer" aria-label="Information sur les visuels">
+      <div class="container reno-disclaimer-inner"><span class="reno-disclaimer-icon" aria-hidden="true">ⓘ</span>
+        <p><strong>Visuels de projection — travaux non réalisés.</strong> Les images ci-dessous sont des simulations de home staging destinées à illustrer des possibilités d'aménagement, et non des photographies de l'état actuel. Les travaux, équipements, dimensions et éventuelles modifications de cloisons nécessitent des vérifications et autorisations préalables.</p>
+      </div>
+    </section>
+    <section class="reno-tour" id="visite" aria-labelledby="tour-title">
+      <div class="container reno-intro">
+        <div><span class="eyebrow eyebrow-dark">L'EXPÉRIENCE IMMERSIVE</span><h2 id="tour-title">Neuf perspectives,<br><em>un nouveau potentiel.</em></h2></div>
+        <p>Tournez à 360° dans les projets de pièces, choisissez les variantes de salle de bains et de terrasse, puis revenez à la visite de l'appartement actuel pour comparer.</p>
+      </div>
+      <div class="reno-immersive container">
+        <div class="reno-scene-panel">
+          <div class="reno-panel-title"><span>PROJECTIONS À EXPLORER</span><strong>Les espaces <sup>09</sup></strong></div>
+          <div class="reno-filters" role="group" aria-label="Filtrer les pièces">
+            <button type="button" class="is-selected" data-filter="all" aria-pressed="true">Tout voir</button>
+            <button type="button" data-filter="living" aria-pressed="false">Séjour</button>
+            <button type="button" data-filter="sleeping" aria-pressed="false">Chambres</button>
+            <button type="button" data-filter="bathroom" aria-pressed="false">Bains</button>
+            <button type="button" data-filter="terrace" aria-pressed="false">Terrasse</button>
+          </div>
+          <div class="reno-scene-list" id="reno-scenes" role="group" aria-label="Scènes après rénovation"></div>
+          <div class="reno-panel-foot">Concept visuel · équipements et implantation à confirmer</div>
+        </div>
+        <div class="reno-viewer-wrap">
+          <div class="reno-viewer" id="reno-viewer" aria-label="Panorama interactif du projet après rénovation"></div>
+          <div class="reno-loading" id="reno-loading" role="status"><strong>Chargement de la projection 360°</strong><span id="reno-status">Préparation de la scène…</span></div>
+          <div class="reno-topbar"><span>PROJECTION · APRÈS RÉNOVATION</span><button type="button" id="reno-share" aria-label="Partager cette perspective" title="Partager cette perspective">↗</button></div>
+          <div class="reno-viewer-footer"><div><span class="reno-category" id="reno-category">PIÈCE DE VIE</span><h3 id="reno-current-title">Séjour et cuisine ouverte</h3><p id="reno-current-desc">Projet de cuisine ouverte et salon esprit chalet</p></div><div class="reno-controls"><button type="button" id="reno-prev" aria-label="Vue précédente">←</button><button type="button" id="reno-next" aria-label="Vue suivante">→</button><button type="button" id="reno-fullscreen" aria-label="Plein écran">⛶</button></div></div>
+        </div>
+      </div>
+      <div class="container reno-tour-bottom"><span>FAITES GLISSER LA VUE AVEC LA SOURIS OU LE DOIGT</span><span>PHOTO SPHERE VIEWER · 360°</span></div>
+    </section>
+    <section class="reno-afterword">
+      <div class="container reno-afterword-inner">
+        <div><span class="eyebrow eyebrow-dark">DE L'IDÉE À LA RÉALITÉ</span><h2>Le bien d'aujourd'hui.<br><em>Le potentiel de demain.</em></h2><p>Envie de revoir les pièces dans leur état actuel ? La visite originale conserve les 15 panoramas réalisés sur place.</p><a href="../#visite" class="btn btn-dark">Revenir à la visite actuelle <span aria-hidden="true">↗</span></a></div>
+        <figure><img src="../assets/cover/salon-lumiere.webp" alt="Séjour réel avant les travaux" width="1300" height="860" loading="lazy"><figcaption>LE ROOFTOP AUJOURD'HUI · PHOTO RÉELLE</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="../#accueil" class="footer-brand">R° <span>ROOFTOP · LA MONGIE</span></a><p>Visuels d'intention — aucune rénovation ni aucun équipement présenté n'est garanti.</p><a href="../#accueil" class="backtop">ACCUEIL ↑</a></div></footer>
+  <div class="reno-toast" id="reno-toast" role="status" aria-live="polite"></div>
+  <noscript><div class="nojs">Activez JavaScript pour explorer les panoramas.</div></noscript>
+</body>
+</html>
