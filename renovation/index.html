@@ -63,10 +63,14 @@
           <div class="reno-scene-list" id="reno-scenes" role="group" aria-label="Scènes après rénovation"></div>
           <div class="reno-panel-foot">Concept visuel · équipements et implantation à confirmer</div>
         </div>
-        <div class="reno-viewer-wrap">
+        <div class="reno-viewer-wrap" id="reno-viewer-wrap">
           <div class="reno-viewer" id="reno-viewer" aria-label="Panorama interactif du projet après rénovation"></div>
           <div class="reno-loading" id="reno-loading" role="status"><strong>Chargement de la projection 360°</strong><span id="reno-status">Préparation de la scène…</span></div>
           <div class="reno-topbar"><span>PROJECTION · APRÈS RÉNOVATION</span><button type="button" id="reno-share" aria-label="Partager cette perspective" title="Partager cette perspective">↗</button></div>
+          <div class="reno-zoom-tools" role="group" aria-label="Zoom du panorama">
+            <button type="button" id="reno-zoom-out" title="Dézoomer" aria-label="Dézoomer">−</button>
+            <button type="button" id="reno-zoom-in" title="Zoomer" aria-label="Zoomer">+</button>
+          </div>
           <div class="reno-viewer-footer"><div><span class="reno-category" id="reno-category">PIÈCE DE VIE</span><h3 id="reno-current-title">Séjour et cuisine ouverte</h3><p id="reno-current-desc">Projet de cuisine ouverte et salon esprit chalet</p></div><div class="reno-controls"><button type="button" id="reno-prev" aria-label="Vue précédente">←</button><button type="button" id="reno-next" aria-label="Vue suivante">→</button><button type="button" id="reno-fullscreen" aria-label="Plein écran">⛶</button></div></div>
         </div>
       </div>

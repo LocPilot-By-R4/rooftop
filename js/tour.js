@@ -25,9 +25,9 @@ try {
     defaultPitch:'0deg',
     defaultZoomLvl:31,
     minFov:35,maxFov:95,
-    mousewheelCtrlKey:true,
+    mousewheel:false,mousewheelCtrlKey:false,
     touchmoveTwoFingers:false,
-    navbar:['zoom','move','fullscreen'],
+    navbar:[],
     loadingTxt:'Chargement de la visite 360°…',
     lang:{zoom:'Zoom',zoomOut:'Dézoomer',zoomIn:'Zoomer',moveUp:'Monter',moveDown:'Descendre',moveLeft:'Gauche',moveRight:'Droite',fullscreen:'Plein écran',loading:'Chargement…',loadError:'Impossible de charger ce panorama',webglError:'WebGL est nécessaire pour la visite 360°',twoFingers:'Utilisez deux doigts pour déplacer la vue',ctrlZoom:'Maintenez Ctrl pour zoomer'},
     plugins:[MarkersPlugin.withConfig({markers:markersFor(initial)})],
@@ -56,7 +56,7 @@ try {
   }
   viewer.addEventListener('ready',()=>{
     ready=true;
-    APP.registerTour({isReady:()=>ready,goTo,fullscreen:()=>viewer.toggleFullscreen()});
+    APP.registerTour({isReady:()=>ready,goTo,zoomIn:()=>viewer.zoomIn(12),zoomOut:()=>viewer.zoomOut(12),fullscreen:async()=>{const host=document.querySelector('.tour-stage');if(document.fullscreenElement)await document.exitFullscreen();else await host.requestFullscreen();}});
     if(APP.getCurrent()!==currentId) goTo(APP.getCurrent());
   },{once:true});
 } catch(err) {

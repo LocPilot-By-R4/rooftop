@@ -101,6 +101,8 @@
     document.addEventListener('keydown',e=>{ if(e.key==='Escape'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');} });
   }
   function bindEvents() {
+    byId('viewer-zoom-in').addEventListener('click',()=>{if(tourBridge?.isReady())tourBridge.zoomIn();else toast('Chargement de la visite en cours');});
+    byId('viewer-zoom-out').addEventListener('click',()=>{if(tourBridge?.isReady())tourBridge.zoomOut();else toast('Chargement de la visite en cours');});
     byId('scene-prev').addEventListener('click',()=>nextScene(-1));
     byId('scene-next').addEventListener('click',()=>nextScene(1));
     byId('viewer-fullscreen').addEventListener('click',()=>{

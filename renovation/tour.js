@@ -52,7 +52,15 @@ function step(n){const i=scenes.findIndex(s=>s.id===activeId);selectScene(scenes
 async function share(){const url=new URL('#'+activeId,location.href).href;if(navigator.share){try{await navigator.share({title:'Rooftop La Mongie — après rénovation',url});return;}catch(e){if(e.name==='AbortError')return;}}try{await navigator.clipboard.writeText(url);notify('Lien de cette perspective copié');}catch(e){notify('Copiez l’adresse de votre navigateur');}}
 byId('reno-prev').addEventListener('click',()=>step(-1));
 byId('reno-next').addEventListener('click',()=>step(1));
-byId('reno-fullscreen').addEventListener('click',()=>ready?viewer.toggleFullscreen():notify('Chargement de la visite en cours'));
+byId('reno-fullscreen').addEventListener('click', async()=>{
+ if(!ready)return notify('Chargement de la visite en cours');
+ try{
+  if(document.fullscreenElement)await document.exitFullscreen();
+  else await byId('reno-viewer-wrap').requestFullscreen();
+ }catch(err){console.error('Plein écran',err);notify('Le plein écran n’est pas disponible sur ce navigateur');}
+});
+byId('reno-zoom-in').addEventListener('click',()=>ready?viewer.zoomIn(12):notify('Chargement de la visite en cours'));
+byId('reno-zoom-out').addEventListener('click',()=>ready?viewer.zoomOut(12):notify('Chargement de la visite en cours'));
 byId('reno-share').addEventListener('click',share);
 byId('reno-scenes').addEventListener('keydown',(e)=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();step(e.key==='ArrowRight'?1:-1);}});
 document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -66,8 +74,8 @@ try {
  viewer=new Viewer({
    container:byId('reno-viewer'),panorama:panorama(init),
    defaultYaw:`${init.yaw}deg`,defaultPitch:'0deg',defaultZoomLvl:31,
-   minFov:35,maxFov:95,mousewheelCtrlKey:true,touchmoveTwoFingers:false,
-   navbar:['zoom','move','fullscreen'],loadingTxt:'Chargement de la projection 360°…',
+   minFov:35,maxFov:95,mousewheel:false,mousewheelCtrlKey:false,touchmoveTwoFingers:false,
+   navbar:[],loadingTxt:'Chargement de la projection 360°…',
    lang:{zoom:'Zoom',zoomOut:'Dézoomer',zoomIn:'Zoomer',moveUp:'Monter',moveDown:'Descendre',moveLeft:'Gauche',moveRight:'Droite',fullscreen:'Plein écran',loading:'Chargement…',loadError:'Impossible de charger cette perspective',webglError:'WebGL est nécessaire pour la visite 360°',twoFingers:'Utilisez deux doigts',ctrlZoom:'Maintenez Ctrl pour zoomer'},
  });
  viewer.addEventListener('ready',()=>{ready=true;byId('reno-loading').classList.add('is-hidden');},{once:true});
