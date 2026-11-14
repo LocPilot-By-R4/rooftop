@@ -74,7 +74,7 @@ try {
  viewer=new Viewer({
    container:byId('reno-viewer'),panorama:panorama(init),
    defaultYaw:`${init.yaw}deg`,defaultPitch:'0deg',defaultZoomLvl:31,
-   minFov:35,maxFov:95,mousewheel:false,mousewheelCtrlKey:false,touchmoveTwoFingers:false,
+   minFov:35,maxFov:95,mousewheel:true,mousewheelCtrlKey:false,touchmoveTwoFingers:false,
    navbar:[],loadingTxt:'Chargement de la projection 360°…',
    lang:{zoom:'Zoom',zoomOut:'Dézoomer',zoomIn:'Zoomer',moveUp:'Monter',moveDown:'Descendre',moveLeft:'Gauche',moveRight:'Droite',fullscreen:'Plein écran',loading:'Chargement…',loadError:'Impossible de charger cette perspective',webglError:'WebGL est nécessaire pour la visite 360°',twoFingers:'Utilisez deux doigts',ctrlZoom:'Maintenez Ctrl pour zoomer'},
  });
