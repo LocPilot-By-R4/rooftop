@@ -25,7 +25,7 @@ try {
     defaultPitch:'0deg',
     defaultZoomLvl:31,
     minFov:35,maxFov:95,
-    mousewheel:false,mousewheelCtrlKey:false,
+    mousewheel:true,mousewheelCtrlKey:false,
     touchmoveTwoFingers:false,
     navbar:[],
     loadingTxt:'Chargement de la visite 360°…',
